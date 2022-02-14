@@ -20,7 +20,10 @@ export async function signInUser(email, password) {
     return resp.user;
 }
 
-export async function checkAuth() {}
+export async function checkAuth() {
+    const user = await getUser();
+    console.log(user);
+}
 
 export async function redirectIfLoggedIn() {}
 
