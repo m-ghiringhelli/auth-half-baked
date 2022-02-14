@@ -8,7 +8,10 @@ export function getUser() {
     return client.auth.session() && client.auth.session().user;
 }
 
-export async function signupUser(email, password) {}
+export async function signupUser(email, password) {
+    const newUser = { email, password };
+    console.log(newUser);
+}
 
 export async function signInUser(email, password) {}
 
