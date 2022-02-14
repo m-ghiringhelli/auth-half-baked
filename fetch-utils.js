@@ -22,7 +22,7 @@ export async function signInUser(email, password) {
 
 export async function checkAuth() {
     const user = await getUser();
-    console.log(user);
+    if (!user) location.replace('../');
 }
 
 export async function redirectIfLoggedIn() {
