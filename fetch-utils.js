@@ -10,10 +10,15 @@ export function getUser() {
 
 export async function signupUser(email, password) {
     const newUser = { email, password };
-    console.log(newUser);
+    // console.log(newUser);
+    const resp = await client.auth.signUp(newUser);
+    return resp.user;
 }
 
-export async function signInUser(email, password) {}
+export async function signInUser(email, password) {
+    const resp = await client.auth.signIn({ email, password });
+    return resp.user;
+}
 
 export async function checkAuth() {}
 
